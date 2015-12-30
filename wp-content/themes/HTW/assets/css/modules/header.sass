@@ -1,0 +1,64 @@
+header
+	z-index: 500
+
+	.top
+		padding: 6px 0
+		+linearGradient(#31394C, #262A39)
+
+	.logo
+		color: #FFF
+		font-size: 19px
+		font-weight: 300
+
+		strong
+			font-weight: 700
+
+	form
+		position: absolute
+		top: 1px
+		right: 0
+		width: 200px
+
+		input[type=text]
+			display: block
+			width: 100%
+			border: 0
+			+borderRadius(2px)
+			+boxSizing(border-box)
+			+boxShadow(none)
+			background: #FFF
+
+			&:not(:focus)
+				+opacity(.8)
+
+			&:focus, &:active
+				border: 0 !important
+				box-shadow: none !important
+
+	nav
+		+sq(auto)
+		line-height: 1
+		margin: 3px auto 0
+		padding: 5px $pad
+		border-bottom: 1px solid #CACACA
+		+boxShadow(0 1px 3px rgba(#000, .2))
+		background: #F7F7F7
+
+		li
+			a:not(.btn)
+				display: inline-block
+				color: #6C6C6C
+				font-family: $fontalt
+				font-size: 12px
+				vertical-align: middle
+				padding: 5px 10px
+				border: 1px solid transparent
+				+borderRadius(2px)
+
+				&:hover
+					color: $link
+
+			+wpActives
+				font-weight: 700
+				border-color: #DADADA
+				background: #FFF

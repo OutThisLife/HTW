@@ -1,0 +1,59 @@
+.page-title
+	margin: 0 auto 20px
+	padding: 0 0 3px
+	border-bottom: 1px solid $border
+
+.list-type
+	margin: 25px auto 0
+
+	a.cover
+		z-index: 1
+
+	.desc > a
+		color: $default
+		font-weight: 700
+
+		&:hover
+			color: $link
+			text-decoration: underline
+
+	.desc p
+		font-size: 13px
+		margin: 0
+
+.item
+	padding: 0
+
+	.shadow
+		padding: $pad
+		+boxShadow(0 3px 7px rgba(#000, .12))
+		+borderRadius(2px)
+		+transition(.2s ease)
+
+	&:hover .shadow
+		+boxShadow(0 3px 7px rgba(#000, .24))
+
+// Videos
+.list-type.video .item
+	+itemize
+
+	.image
+		min-height: 1px
+		background-color: #CCC
+
+		&:hover + .desc > a
+			color: $link
+			text-decoration: underline
+			background: rgba($link, .1)
+
+// Books
+.list-type.book .item
+	padding: 8px !important
+	margin: 0 auto $pad
+
+	&:hover .desc > a
+		color: $link
+		text-decoration: underline
+
+	.desc p
+		margin-top: 5px

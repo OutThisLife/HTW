@@ -1,0 +1,25 @@
+server {
+	...
+
+	location / {
+		if (!-e $request_filename){
+			rewrite ^/([^/]+)/?$ /wp-content/plugins/i-static/content/$1.html break;
+		}
+
+		if (!-e $request_filename){
+			rewrite ^/([^/]+)/([^/]+)/?$ /wp-content/plugins/i-static/content/$1-$2.html break;
+		}
+
+		if (!-e $request_filename){
+			rewrite ^/([^/]+)/([^/]+)/([^/]+)/?$ /wp-content/plugins/i-static/content/$1-$2-$3.html break;
+		}
+
+		if ($request_filename ~ /index.php){
+			rewrite ^(.*)$ /wp-content/plugins/i-static/content/index.html break;
+		}
+
+		if (!-e $request_filename){
+			rewrite ^(.*)$ /index.php break;
+		}
+	}
+}

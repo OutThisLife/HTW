@@ -1,0 +1,21 @@
+{
+  "name": "htw",
+  "version": "0.0.0",
+  "authors": [
+    "Talasan Nicholson <talasan.nicholson@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize": "~1.0.4",
+    "semantic-ui": "~2.1.7",
+    "materialize": "~0.97.5",
+    "isotope": "~2.2.2"
+  }
+}

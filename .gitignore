@@ -1,0 +1,6 @@
+wp/
+bower_components/
+node_modules/
+.sass-cache/
+assets/css/.sass-cache/
+wp-config.php
